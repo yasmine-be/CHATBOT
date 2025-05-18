@@ -1,0 +1,736 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Bonjour", "Salut", "Hey", "Hello"],
+      "responses": ["Bonjour ! Comment puis-je vous aider ?", "Salut à vous !", "Hey, How Can I Help You ?"],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Au revoir", "Bye", "À bientôt", "Goodbye"],
+      "responses": ["À bientôt !", "Au revoir, passez une bonne journée !", "GoodBye" ],
+      "context": [""]
+    },
+    {
+      "tag": "creator",
+      "patterns": ["Who made you?", "Who is your Creator?", "Qui t'a créé ?"],
+      "responses": ["I was Created by Yasmine Berred(yb)", "J'ai été créé par Yasmine Berred (yb)" ],
+      "context": [""]
+    },
+    {
+      "tag": "functions",
+      "patterns": ["What can You do?", "What is Your Functionalities?","Uses","functions","Que peux-Tu faire ?"],
+      "responses": ["Je suis un assistant médical intelligent capable d’analyser vos symptômes et d’identifier la pathologie présentant la plus forte probabilité de correspondre à votre état.",  "I am a medical bot that listens to your symptoms and tells you the disease you are most likely to have."],
+      "context": [""]
+    },
+    {
+      "tag": "allergie",
+      "patterns": [
+        "nasal congestion itchy watery eyes sneezing runny nose sore throat",
+        "nasal congestion, itchy watery eyes, sneezing, runny nose, scratchy throat, throat clearing, cough from postnasal drip",
+        "itching in eyes or nose, sneezing, nasal discharge, sinus pressure",
+        "skin rash or hives, swelling of face or lips, breathing difficulty",
+        "wheezing, coughing, chest tightness, shortness of breath after exposure to allergens",
+        "nausea, vomiting,  diarrhea after eating certain foods",
+        "congestion nasale, yeux larmoyants, éternuements, nez qui coule, mal de gorge",
+        "démangeaisons au niveau des yeux ou du nez, éternuements, écoulement nasal, pression dans les sinus",
+        "éruption cutanée ou urticaire, gonflement du visage ou des lèvres, difficulté à respirer",
+        "toux, respiration sifflante, sensation d’oppression thoracique après contact avec un allergène",
+        "nausées, vomissements ou diarrhée après ingestion de certains aliments"
+      ],
+      "responses": [ "Vous avez peut-être une allergie. Évitez ce qui déclenche les symptômes et consultez un médecin si cela s’aggrave.", "You may have an allergy. Try to avoid what causes the symptoms and see a doctor if it gets worse."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "anemia",
+        "anémie"
+      ],
+      "patterns": ["Fatigue, weakness, dizziness, pale skin, shortness of breath, rapid heartbeat , cold hands,cold feet, headaches, brittle nails, chest pain, brain fog, pica (unusual cravings), leg cramps, restless legs syndrome (RLS),",
+    "Fatigue, faiblesse, étourdissements, peau pâle, essoufflement, palpitations (rythme cardiaque rapide), mains froids , pieds froids, maux de tête, ongles cassants, douleur thoracique, difficultés de concentration, envie de manger des choses non alimentaires (pica), crampes musculaires, syndrome des jambes sans repos (SJSR)"],
+      "responses": ["You are showing symptoms of anemia, possibly due to iron deficiency, vitamin B12 deficiency, or other causes. Consult a doctor for proper diagnosis.",
+    "Vous présentez des symptômes d'anémie, possiblement due à une carence en fer, en vitamine B12 ou d'autres causes. Consultez un médecin pour un diagnostic précis."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "cold",
+        "flu",
+        "rhume",
+        "grippe"
+      ],
+      "patterns": ["Headache, body aches, fever, chills, nasal congestion, runny nose, sneezing, cough (dry or productive), sore throat, fatigue, mild chest discomfort, watery eyes, loss of taste, loss of smell, swollen lymph nodes",
+    "Maux de tête, courbatures, fièvre, frissons, nez bouché, écoulement nasal, éternuements, toux (sèche ou grasse), mal de gorge, fatigue, gêne thoracique légère, yeux larmoyants, perte de goût, perte de odorat, ganglions enflés"],
+      "responses": ["You are showing symptoms of a **cold** or **flu**. Rest, hydrate, and consider over-the-counter relief. If fever is high (>38.5°C/101°F) or breathing difficulties occur, seek medical help.",
+    "Vous présentez des symptômes de **rhume** ou de **grippe**. Reposez-vous, hydratez-vous et prenez des médicaments en vente libre si nécessaire. Si la fièvre est élevée (>38,5°C) ou en cas de difficultés respiratoires, consultez un médecin."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "asthma",
+        "asthme",
+        "respiratory",
+        "respiration"
+      ],
+      "patterns": ["Shortness of breath, chest tightness or pain, wheezing, whistling sound when breathing, coughing (worse at night/early morning), difficulty speaking due to breathlessness, rapid breathing, anxiety triggered by breathing difficulties, fatigue from labored breathing",
+    "Essoufflement, oppression ou douleur thoracique, sifflements respiratoires, toux ,(aggravée la nuit/tôt le matin), difficulté à parler par manque de souffle, respiration rapide, anxiété due aux difficultés respiratoires, fatigue liée à l'effort respiratoire"],
+      "responses": ["You are showing symptoms of asthma. Avoid triggers (dust, pollen, smoke), use prescribed inhalers if available, and seek medical attention if symptoms worsen or breathing becomes severely difficult.",
+    "Vous présentez des symptômes d'asthme. Évitez les déclencheurs (poussière, pollen, fumée), utilisez vos inhalateurs si prescrits, et consultez un médecin si les symptômes s'aggravent ou si la respiration devient très difficile."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "asthma",
+        "asthme",
+        "respiratory",
+        "respiration"
+      ],
+      "patterns": ["Memory loss disrupting daily life , repeating questions, forgetting recent events, confusion about time or place, difficulty completing familiar tasks, poor judgment (financial mistakes), withdrawal from social activities, mood/personality changes (agitation, irritability, aggression), difficulty communicating , word-finding problems, misplacing items abnormally",
+    "Perte de mémoire perturbant la vie quotidienne, désorientation temporelle ou spatiale, difficulté à accomplir des tâches familières, jugement altéré (erreurs financières), repli social, changements d'humeur/personnalité (agitation, irritabilité), difficultés de communication , trouver ses mots, égarer des objets de façon inhabituelle"],
+      "responses": ["These symptoms may indicate Alzheimer's disease or another form of dementia. Please consult a doctor for a comprehensive evaluation. Early diagnosis allows for better management. Contact a caregiver if safety is a concern.",
+    "Ces symptômes peuvent évoquer la maladie d'Alzheimer ou une autre démence. Consultez un médecin pour un bilan complet. Un diagnostic précoce permet une meilleure prise en charge. Contactez un aidant en cas de risque pour la sécurité."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "pregnancy",
+        "grossesse"
+      ],
+      "patterns": ["Missed period, breast swelling/tenderness, food cravings, nausea , vomiting ,morning sickness, frequent urination, fatigue, mood swings, light spotting (implantation bleeding), heightened sense of smell, bloating, mild pelvic cramping",
+    "Absence de règles, seins gonflés/douloureux, fringales spécifiques, nausées , vomissements , nausées matinales, envies fréquentes d'uriner, fatigue, sautes d'humeur, léger saignement (saignement d'implantation), odorat accru, ballonnements, crampes pelviennes légères"],
+      "responses": ["You are showing common early signs of pregnancy. Consider taking a home pregnancy test. For confirmation, schedule an appointment with a healthcare provider to begin prenatal care if positive.",
+    "Vous présentez des signes précoces fréquents de grossesse. Faites un test de grossesse à domicile. Pour confirmation, consultez un professionnel de santé pour débuter un suivi prénatal si le test est positif."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "hyperthyroid",
+        "hyperthyroidism",
+        "graves",
+        "thyrotoxicosis",
+        "hyperthyroïdie"
+      ],
+      "patterns": ["Rapid heart rate (tachycardia/palpitations), excessive sweating, heat intolerance, hand tremors, nervousness , agitation, fatigue despite hyperactivity, unintentional weight loss (despite normal/increased appetite), hair thinning , hair loss, muscle weakness, frequent bowel movements/diarrhea, sleep disturbances, menstrual irregularities, eye changes , bulging , irritation in Graves' disease)",
+    "Rythme cardiaque rapide (tachycardie/palpitations), transpiration excessive, intolérance à la chaleur, tremblements des mains, nervosité , agitation, fatigue malgré une hyperactivité, perte de poids involontaire (malgré un appétit normal/augmenté), amincissement , perte des cheveux, faiblesse musculaire, selles fréquentes/diarrhée, troubles du sommeil, irrégularités menstruelles, modifications oculaires , yeux exorbités , irritation dans la maladie de Basedow)"],
+      "responses": ["You are showing classic symptoms of hyperthyroidism (overactive thyroid). This requires medical evaluation with blood tests (TSH, T3/T4). Untreated hyperthyroidism can lead to serious complications like heart problems or thyroid storm. Please consult a doctor promptly.",
+    "Vous présentez des symptômes classiques d'hyperthyroïdie. Cela nécessite un bilan médical avec analyses sanguines (TSH, T3/T4). Non traitée, l'hyperthyroïdie peut entraîner des complications graves (problèmes cardiaques ou crise thyréotoxique). Consultez un médecin rapidement."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "hypothyroid",
+        "hypothyroidism",
+        "hashimoto",
+        "myxedema",
+        "hypothyroïdie"
+      ],
+      "patterns": ["Fatigue, depression, unexplained weight gain (despite normal eating), cold intolerance, excessive sleepiness, dry skin , coarse skin, muscle cramps ,muscle weakness, constipation, hair loss , hair thinning, brittle nails, hoarse voice, memory/concentration problems (brain fog), heavy/irregular menstrual periods, high cholesterol, puffy face (myxedema)",
+    "Fatigue, dépression, prise de poids inexpliquée (malgré une alimentation normale), intolérance au froid, somnolence excessive, peau sèche ,peau rugueuse, crampes muscuairesl , faiblesse muscuairesl, constipation, perte des cheveux , amincissement des cheveux, ongles cassants, voix rauque, problèmes de mémoire/concentration (brouillard mental), règles abondantes/irrégulières, cholestérol élevé, visage bouffi (myxœdème)"],
+      "responses": ["You are showing classic symptoms of hypothyroidism (underactive thyroid). This requires blood tests (TSH, T4) for diagnosis. Hypothyroidism is easily treatable with thyroid hormone replacement. Please see a doctor for evaluation.",
+    "Vous présentez des symptômes classiques d'hypothyroïdie. Un bilan sanguin (TSH, T4) est nécessaire pour le diagnostic. L'hypothyroïdie se traite facilement par hormones thyroïdiennes de substitution. Consultez un médecin pour évaluation."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "diabetes",
+        "diabetes_mellitus",
+        "diabète"
+      ],
+      "patterns": ["Excessive thirst (polydipsia), frequent urination (polyuria), extreme hunger (polyphagia), unexplained weight loss , fatigue, blurred vision, slow-healing wounds, frequent infections (yeast/UTIs), dry mouth, fruity-smelling breath (DKA warning sign), tingling/numbness in hands,numbness in feet (neuropathy)",
+    "Soif excessive (polydipsie), urination fréquente (polyurie), faim extrême (polyphagie), perte de poids inexpliquée , fatigue, vision floue, cicatrisation lente, infections fréquentes (mycoses/UTI), bouche sèche, haleine fruitée (signe d'acidocétose), picotements/engourdissements (neuropathie)"],
+      "responses": [ "You are showing classic symptoms of diabetes. This requires urgent medical evaluation with blood glucose testing (fasting sugar or HbA1c). Untreated diabetes can lead to dangerous complications. Please see a doctor within 24-48 hours.",
+      "Vous présentez des symptômes classiques de diabète. Une évaluation médicale urgente avec tests de glycémie (à jeun ou HbA1c) est nécessaire. Non traité, le diabète peut entraîner des complications graves. Consultez un médecin dans les 24-48 heures."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "hypertension",
+        "high_blood_pressure",
+        "HBP",
+        "HTN",
+        "hypertension_artérielle"
+      ],
+      "patterns": ["Severe headache, dizziness, shortness of breath, blurred vision, double vision, nosebleeds (epistaxis), blood in urine (hematuria), fatigue ,confusion, chest pain/palpitations, buzzing in ears (tinnitus), facial flushing, irregular heartbeat, difficulty sleeping",
+    "Maux de tête sévères, vertiges, essoufflement, vision trouble ,  vision double, saignements de nez (épistaxis), sang dans les urines (hématurie), fatigue ,confusion, douleur thoracique/palpitations, bourdonnements d'oreilles (acouphènes), rougeur du visage, rythme cardiaque irrégulier, troubles du sommeil"],
+      "responses": [ "You are showing potentially dangerous symptoms of severe hypertension (high blood pressure). This requires IMMEDIATE medical attention as it may indicate hypertensive crisis (>180/120 mmHg) which can lead to stroke or organ damage. Call emergency services if experiencing chest pain/severe headache.",
+    "Vous présentez des symptômes potentiellement dangereux d'hypertension sévère. Cela nécessite une attention médicale IMMÉDIATE car cela peut indiquer une crise hypertensive (>180/120 mmHg) risquant d'entraîner un AVC ou des lésions organiques. Appelez les urgences en cas de douleur thoracique/maux de tête intenses."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "hiv",
+        "aids",
+        "hiv_aids",
+        "immunodeficiency",
+        "vih_sida"
+      ],
+      "patterns": ["Acute HIV (2-4 weeks post-exposure): High fever (>38°C/100.4°F), swollen lymph nodes (neck/armpits/groin), severe fatigue, rash (trunk/face), muscle/joint pain, sore throat, mouth ulcers, night sweats, chills, headache, diarrhea. Late-stage (AIDS): Rapid weight loss, recurrent fever, chronic diarrhea, persistent white spots/oral thrush, pneumonia, memory loss",
+    "Phase aiguë (2-4 semaines post-exposition): Forte fièvre (>38°C), ganglions enflés (cou/aisselles/aine), fatigue extrême, éruption cutanée (torse/visage), douleurs musculaires/articulaires, mal de gorge, ulcères buccaux, sueurs nocturnes, frissons, céphalées, diarrhée. Stade SIDA: Perte de poids rapide, fièvres récurrentes, diarrhée chronique, candidose orale, pneumonies, troubles de mémoire"],
+      "responses": [ "You are showing symptoms that may indicate acute HIV infection (especially if recent exposure within 2-6 weeks). URGENT testing is required - modern HIV treatments can prevent progression to AIDS if started early. Seek immediate medical care for PEP (post-exposure prophylaxis) if exposure occurred <72 hours ago.",
+    "Vous présentez des symptômes pouvant évoquer une primo-infection par le VIH (surtout en cas d'exposition récente dans les 2-6 semaines). Un test URGENT est nécessaire - les traitements modernes peuvent empêcher l'évolution vers le SIDA s'ils sont débutés précocement. Consultez immédiatement pour une PPE (prophylaxie post-exposition) si l'exposition date de <72 heures."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "panic_attack",
+        "anxiety",
+        "panic_disorder",
+        "crise_angoisse",
+        "attaque_panique"
+      ],
+      "patterns": ["Sudden onset of racing heart, Sudden onset of pounding heart (palpitations), chest pain , discomfort, shortness of breath, trembling , shaking, sweating, choking sensation, nausea , abdominal distress, dizziness , lightheadedness, chills/hot flashes, numbness, nbtingling (paresthesia), derealization/depersonalization (feeling unreal/detached), fear of losing control/dying",
+    "Apparition soudaine de cœur qui bat vite (palpitations), douleur thoracique, essoufflement, tremblements, transpiration, sensation d'étouffement, nausées, maux de ventre, vertiges, étourdissements, frissons/bouffées de chaleur, picotements/engourdissements (paresthésies), déréalisation/dépersonnalisation (sentiment d'irréalité/détachement), peur de perdre le contrôle"],
+      "responses": ["You're experiencing symptoms of a panic attack. While frightening, these episodes are not life-threatening. Try slow breathing (4-7-8 technique: inhale 4s, hold 7s, exhale 8s) and grounding exercises (name 5 things you see). Seek medical evaluation to rule out cardiac causes, especially if first episode.",
+    "Vous présentez les symptômes d'une crise de panique. Bien qu'effrayants, ces épisodes ne sont pas dangereux. Essayez la respiration lente (technique 4-7-8 : inspirer 4s, bloquer 7s, expirer 8s) et des exercices d'ancrage (nommez 5 choses que vous voyez). Consultez un médecin pour éliminer des causes cardiaques, surtout s'il s'agit d'un premier épisode."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "bone_tumor",
+        "bone_cancer",
+        "osteosarcoma",
+        "metastatic_bone",
+        "tumeur_osseuse"
+      ],
+      "patterns": ["Persistent dull, aching bone pain (worsens at night), localized swelling, tenderness, unexplained bone fractures (pathological fractures), palpable lump/mass, weight loss, fatigue, limited joint mobility, neurological symptoms (if spine affected: numbness/weakness), fever (in some cases)",
+    "Douleur osseuse sourde , lancinante persistante (s'aggrave la nuit), gonflement localisé, fractures inexpliquées (fractures pathologiques), masse palpable, perte de poids, fatigue, mobilité articulaire réduite, symptômes neurologiques (si colonne touchée : engourdissements/faiblesse), fièvre (parfois)"],
+      "responses": ["You are showing concerning symptoms of possible bone pathology. These symptoms REQUIRE urgent orthopedic evaluation with imaging (X-ray/MRI) and possibly biopsy. While most bone lesions are benign, early detection of malignant tumors significantly improves outcomes.",
+    "Vous présentez des symptômes préoccupants pouvant évoquer une pathologie osseuse. Ces symptômes NÉCESSITENT une évaluation orthopédique urgente avec imagerie (radiographie/IRM) et potentiellement une biopsie. Bien que la plupart des lésions osseuses soient bénignes, la détection précoce des tumeurs malignes améliore significativement le pronostic."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "malaria",
+        "plasmodium",
+        "tropical_disease",
+        "paludisme"
+      ],
+      "patterns": ["Cyclic fever (every 48-72 hours) with chills/rigors, severe headache, nausea , vomiting, profuse sweating after fever breaks, extreme fatigue, muscle/joint pain, abdominal pain, diarrhea (in some cases), anemia (pale skin), jaundice (yellow eyes/skin in severe cases), confusion (cerebral malaria)",
+    "Fièvre cyclique (tous les 48-72 heures) avec frissons/rigidités, céphalées intenses, nausées , vomissements, sueurs profuses après la fièvre, fatigue extrême, douleurs musculaires/articulaires, douleurs abdominales, diarrhée (parfois), anémie (peau pâle), jaunisse (yeux/peau jaunes dans les cas graves), confusion (paludisme cérébral)"],
+      "responses": ["You are showing classic symptoms of malaria. This is a MEDICAL EMERGENCY if you've been in a malaria-endemic area recently. Immediate testing (blood smear/RDT) and treatment are required - severe malaria can be fatal within 24 hours. Seek care NOW if you have any fever after tropical travel.",
+    "Vous présentez des symptômes classiques de paludisme. C'est une URGENCE MÉDICALE si vous avez visité une zone endémique récemment. Des tests immédiats (frottis sanguin/TDR) et un traitement sont nécessaires - le paludisme grave peut être mortel en 24 heures. Consultez IMMÉDIATEMENT en cas de fièvre après un voyage tropical."],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "dengue",
+        "breakbone_fever",
+        "dengue_fever",
+        "tropical_disease",
+        "dengue"
+      ],
+      "patterns": [
+        "High fever (40°C/104°F), severe headache (behind eyes), muscle pain , joint pain (\"breakbone fever\"), nausea,vomiting, rash (appears 2-5 days after fever), mild bleeding (nose/gums), fatigue, swollen glands. WARNING SIGNS: Severe abdominal pain, persistent vomiting, rapid breathing, bleeding gums, restlessness, blood in vomit, blood in stool (dengue hemorrhagic fever)",
+        "Fort fièvre (40°C), céphalées intenses (derrière les yeux), douleurs musculaires, douleurs articulaires (\"fièvre breakbone\"), nausées, vomissements, éruption cutanée (apparaît 2-5 jours après la fièvre), saignements légers (nez/gencives), fatigue, ganglions enflés. SIGNES D'ALERTE : Douleurs abdominales sévères, vomissements persistants, respiration rapide, saignements des gencives, agitation, sang dans les selles , sang dans les vomissements (dengue hémorragique)"
+      ],
+      "responses": [
+        "You are showing symptoms of dengue fever. This requires URGENT medical attention if you've been in a dengue-endemic area. Watch for warning signs of severe dengue (hemorrhagic fever) - these appear 3-7 days after first symptoms and REQUIRE IMMEDIATE HOSPITALIZATION. Hydrate frequently and avoid NSAIDs (use paracetamol only).",
+        "Vous présentez des symptômes de dengue. Cela nécessite une attention MÉDICALE URGENTE si vous avez visité une zone endémique. Surveillez les signes de dengue sévère (forme hémorragique) - ils apparaissent 3-7 jours après les premiers symptômes et NÉCESSITENT une HOSPITALISATION IMMÉDIATE. Hydratez-vous fréquemment et évitez les AINS (utilisez uniquement du paracétamol)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "hepatitis_b",
+        "hbv",
+        "liver_disease",
+        "viral_hepatitis",
+        "hépatite_b"
+      ],
+      "patterns": [
+        "Fatigue, loss of appetite, nausea,vomiting, jaundice , yellow skin , yellow yes, dark urine, clay-colored stools, pain/discomfort in upper right abdomen, joint pain, fever (low-grade), generalized itching, liver tenderness/enlargement. Chronic signs: Spider angiomas, ascites (fluid buildup), confusion (hepatic encephalopathy in advanced cases)",
+    "Fatigue, perte d'appétit, nausées,vomissements, jaunisse , peau jaunes ,yeux jaunes, urines foncées, selles décolorées, douleur/inconfort dans l'abdomen supérieur droit, douleurs articulaires, fièvre légère, démangeaisons généralisées, foie sensible/gonflé. Signes chroniques : angiomes stellaires, ascite (accumulation de liquide), confusion (encéphalopathie hépatique aux stades avancés)"
+      ],
+      "responses": [
+       "You are showing classic symptoms of Hepatitis B infection. This requires URGENT medical evaluation with blood tests (HBsAg, liver function tests). Acute HBV can become chronic if untreated, leading to cirrhosis/liver cancer. Practice strict precautions to prevent transmission (blood/body fluids). Vaccination is available for contacts.",
+    "Vous présentez des symptômes classiques d'hépatite B. Une évaluation MÉDICALE URGENTE avec analyses sanguines (HBsAg, tests hépatiques) est nécessaire. L'hépatite B aiguë peut devenir chronique sans traitement, entraînant cirrhose/cancer du foie. Prenez des précautions strictes pour éviter la transmission (sang/fluides corporels). Un vaccin existe pour les contacts."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "paronychia",
+        "nail_infection",
+        "acute_paronychia",
+        "chronic_paronychia",
+        "périonyxis"
+      ],
+      "patterns": [
+       "Acute: Rapid-onset redness, swelling, throbbing pain near nail fold, pus-filled abscess (yellow/white), warm to touch. Chronic: Recurrent inflammation, thickened/crinkled nail folds, Beau's lines (nail ridges), greenish discoloration (Pseudomonas), nail plate separation (onycholysis), missing cuticle",
+    "Aigu : Rougeur d'apparition rapide, gonflement, douleur lancinante près du bourrelet unguéal, abcès purulent (jaune/blanc), chaleur locale. Chronique : Inflammation récurrente, bourrelets épaissis/plissés, stries de Beau (crêtes sur l'ongle), coloration verdâtre (Pseudomonas), décollement de la tablette unguéale (onycholyse), cuticule absente"
+      ],
+      "responses": [
+        "You're showing symptoms of paronychia (nail fold infection). For acute cases: Soak in warm water 3-4x daily, avoid nail biting. If pus present or symptoms persist >48 hours, seek medical care for possible drainage/antibiotics. Chronic cases require identifying/treating underlying causes (eczema, diabetes).",
+        "Vous présentez des symptômes de périonyxis (infection du bourrelet unguéal). Forme aiguë : Trempez dans l'eau tiède 3-4x/jour, évitez de ronger les ongles. Si présence de pus ou persistance >48h, consultez pour un drainage/antibiotiques. Les formes chroniques nécessitent de traiter la cause sous-jacente (eczéma, diabète)."    
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "pancreatic_cancer",
+        "pancreatic_adenocarcinoma",
+        "exocrine_cancer",
+        "cancer_du_pancréas"
+      ],
+      "patterns": [
+        "Persistent upper abdominal pain (radiating to back), unexplained weight loss (>5% in 6 months), loss of appetite, jaundice (yellow skin/eyes, dark urine, pale stools), new-onset diabetes (after age 50), digestive issues (nausea, floating/oily stools), blood clots (unusual locations), depression (often preceding diagnosis), fatigue, gallbladder/liver enlargement",
+    "Douleur abdominale haute persistante (irradiant dans le dos), perte de poids inexpliquée (>5% en 6 mois), perte d'appétit, jaunisse (peau/yeux jaunes, urines foncées, selles pâles), diabète nouvellement diagnostiqué (après 50 ans), troubles digestifs (nausées, selles flottantes/grasseuses), caillots sanguins (localisations inhabituelles), dépression (souvent pré-diagnostic), fatigue, foie/vésicule biliaire augmentés"
+      ],
+      "responses": [
+        "You are showing concerning symptoms that may indicate pancreatic cancer. These require URGENT medical evaluation with imaging (CT/MRI) and tumor marker tests (CA19-9). Early detection significantly improves outcomes. Seek immediate attention if jaundice or persistent pain develops, especially with weight loss.",
+    "Vous présentez des symptômes préoccupants pouvant évoquer un cancer du pancréas. Une évaluation MÉDICALE URGENTE avec imagerie (scanner/IRM) et dosage de marqueurs tumoraux (CA19-9) est nécessaire. Un dépistage précoce améliore significativement le pronostic. Consultez immédiatement en cas de jaunisse ou douleurs persistantes, surtout avec perte de poids."    
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "chickenpox",
+        "varicella",
+        "childhood_illness",
+        "varicelle"
+      ],
+      "patterns": [
+        "Fever (38-39°C/100-102°F), itchy rash starting as red spots → fluid-filled blisters → crusts (appears in crops), fatigue, headache, loss of appetite. Rash progression: Face/chest first → spreads everywhere (even scalp/mouth/genitals). All stages (spots/blisters/scabs) coexist simultaneously.",
+    "Fièvre (38-39°C), éruption prurigineuse débutant par des taches rouges → vésicules remplies de liquide → croûtes (apparaissent par poussées), fatigue, céphalées, perte d'appétit. Évolution : Visage/torse d'abord → généralisation (même cuir chevelu/bouche/organes génitaux). Tous les stades (taches/vésicules/croûtes) coexistent simultanément."
+  ],
+      "responses": [
+        "You're showing classic symptoms of chickenpox (varicella). ISOLATE immediately - highly contagious until all blisters crust. Use calamine lotion/cool baths for itching. Avoid scratching to prevent scarring. Seek URGENT care if: high fever >39°C, breathing difficulty, rash near eyes, or confusion develops.",
+    "Vous présentez des symptômes classiques de varicelle. ISOLEZ-VOUS immédiatement - très contagieux jusqu'à l'assèchement des vésicules. Utilisez de la lotion calamine/bains frais contre les démangeaisons. Évitez de gratter pour prévenir les cicatrices. Consultez en URGENCE en cas de : fièvre >39°C, difficultés respiratoires, éruption près des yeux ou confusion."    
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "jaundice",
+        "neonatal_jaundice",
+        "hyperbilirubinemia",
+        "kernicterus",
+        "ictère_néonatal"
+      ],
+      "patterns": [
+        "Yellow skin (starts face → chest → limbs), yellow sclerae, poor feeding, lethargy, high-pitched crying, hypotonia (floppiness) or hypertonia (stiffness), arched back (opisthotonos), fever, seizures (in severe cases). Progression: Appears 2-4 days after birth, peaks day 5-7.",
+    "Peau jaune (débute visage → torse → membres), blanc des yeux jaune, mauvaise alimentation, léthargie, cris aigus, hypotonie (mollesse) ou hypertonie (raideur), dos arqué (opisthotonos), fièvre, convulsions (cas graves). Évolution : Apparaît 2-4 jours après la naissance, pic jour 5-7."
+  ],
+      "responses": [
+         "This baby is showing symptoms of significant neonatal jaundice that may indicate dangerous bilirubin levels. This is a MEDICAL EMERGENCY - untreated high bilirubin can cause permanent brain damage (kernicterus). Seek IMMEDIATE pediatric evaluation with bilirubin testing. Breastfeed frequently (10-12x/day) to help excretion.",
+    "Ce bébé présente des symptômes d'ictère néonatal sévère pouvant indiquer un taux dangereux de bilirubine. C'est une URGENCE MÉDICALE - un taux élevé non traité peut causer des lésions cérébrales permanentes (kernicterus). Consultez IMMÉDIATEMENT un pédiatre pour un dosage de bilirubine. Allaitez fréquemment (10-12x/jour) pour favoriser l'élimination."
+    ],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "diarrhea",
+        "acute_diarrhea",
+        "gastroenteritis",
+        "diarrhée_aiguë"
+      ],
+      "patterns": [
+       "Frequent loose/watery stools (>3/day), abdominal cramping, urgency, bloating. Possible associated: nausea, vomiting, low-grade fever, malaise. Dehydration signs: Dry mouth, sunken eyes, reduced urine output, dizziness. Red flags: Blood/mucus in stool, high fever (>38.5°C), severe pain, symptoms >48h",
+    "Selles fréquentes/liquides (>3/jour), crampes abdominales, urgentisme, ballonnements. Associés possibles : nausées, vomissements, fièvre légère, malaise. Signes de déshydratation : bouche sèche, yeux creusés, urines réduites, étourdissements. Signaux d'alarme : sang/mucus dans les selles, fièvre élevée (>38,5°C), douleur intense, symptômes >48h"
+  ],
+      "responses": [
+         "You're experiencing acute diarrhea. Priority is rehydration - drink oral rehydration solutions (ORS) frequently. Eat bland foods (BRAT diet: Bananas, Rice, Applesauce, Toast). Seek medical care if: dehydration signs appear, symptoms persist >2 days, or if you see blood in stool. Avoid anti-diarrheals initially in infectious cases.",
+    "Vous présentez une diarrhée aiguë. Priorité à la réhydratation - buvez des solutions de réhydratation orale (SRO) fréquemment. Consommez des aliments fades (régime BRAT : Bananes, Riz, Compote, Toast). Consultez si : signes de déshydratation, symptômes >2 jours, ou sang dans les selles. Évitez les anti-diarrhéiques en première intention pour les causes infectieuses."
+    ],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "indigestion",
+        "dyspepsia",
+        "functional_dyspepsia",
+        "upset_stomach",
+        "dyspepsie"
+      ],
+      "patterns": [
+       "Upper abdominal discomfort (epigastric), early satiety, postprandial fullness, bloating, nausea, occasional vomiting, belching, heartburn. Alarm features: Unintentional weight loss, persistent vomiting, difficulty swallowing, anemia, family history of GI cancers",
+    "Gêne épigastrique, satiété précoce, plénitude postprandiale, ballonnements, nausées, vomissements occasionnels, éructations, brûlures d'estomac. Signes d'alarme : Perte de poids involontaire, vomissements persistants, dysphagie, anémie, antécédents familiaux de cancers digestifs"
+  ],
+      "responses": [
+         "You're showing symptoms of dyspepsia (indigestion). Try eating smaller meals, avoiding triggers (fatty/spicy foods, caffeine), and elevating your head at night. If symptoms persist >2 weeks or you develop alarm features (weight loss, vomiting blood), seek medical evaluation to rule out ulcers or other conditions.",
+    "Vous présentez des symptômes de dyspepsie. Essayez des repas plus petits, évitez les déclencheurs (aliments gras/épicés, caféine) et surélevez votre tête la nuit. Si les symptômes persistent >2 semaines ou apparition de signes alarmants (perte de poids, vomissements sanglants), consultez pour éliminer un ulcère ou autre pathologie."
+    ],
+      "context": [""]
+    },
+    {
+      "tag": [
+        "indigestion",
+        "dyspepsia",
+        "functional_dyspepsia",
+        "upset_stomach",
+        "dyspepsie"
+      ],
+      "patterns": [
+       "Upper abdominal discomfort (epigastric), early satiety, postprandial fullness, bloating, nausea, occasional vomiting, belching, heartburn. Alarm features: Unintentional weight loss, persistent vomiting, difficulty swallowing, anemia, family history of GI cancers",
+    "Gêne épigastrique, satiété précoce, plénitude postprandiale, ballonnements, nausées, vomissements occasionnels, éructations, brûlures d'estomac. Signes d'alarme : Perte de poids involontaire, vomissements persistants, dysphagie, anémie, antécédents familiaux de cancers digestifs"
+  ],
+      "responses": [
+         "You're showing symptoms of dyspepsia (indigestion). Try eating smaller meals, avoiding triggers (fatty/spicy foods, caffeine), and elevating your head at night. If symptoms persist >2 weeks or you develop alarm features (weight loss, vomiting blood), seek medical evaluation to rule out ulcers or other conditions.",
+    "Vous présentez des symptômes de dyspepsie. Essayez des repas plus petits, évitez les déclencheurs (aliments gras/épicés, caféine) et surélevez votre tête la nuit. Si les symptômes persistent >2 semaines ou apparition de signes alarmants (perte de poids, vomissements sanglants), consultez pour éliminer un ulcère ou autre pathologie."
+    ],
+      "context": [""]
+    },
+    {
+      "tag": [ "constipation", "bowel_disorder", "constipation"],
+      "patterns": [
+        "Fewer than 3 bowel movements/week, hard/lumpy stools, straining, sensation of incomplete evacuation, lower abdominal discomfort, anal fissures (pain/bleeding), bloating",
+        "Moins de 3 selles/semaine, selles dures, efforts de poussée, sensation d'évacuation incomplète, gêne abdominale basse, fissures anales (douleur/saignement), ballonnements"
+      ],
+      "responses": [
+        "You're showing symptoms of constipation. Increase fiber intake (25-30g/day), drink more water, and exercise regularly. Seek medical care if: symptoms persist >3 weeks, you see blood in stool, or experience unexplained weight loss.",
+        "Vous présentez des symptômes de constipation. Augmentez les fibres (25-30g/jour), buvez plus d'eau et faites de l'exercice. Consultez si : symptômes >3 semaines, sang dans les selles ou perte de poids inexpliquée."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["appendicitis", "acute_abdomen", "appendicite"],
+      "patterns": [
+        "Periumbilical pain migrating to RLQ, anorexia, nausea, vomiting, fever (38-39°C), rebound tenderness, guarding, pain on walking, pain on coughing",
+        "Douleur périombilicale migrant en FID, anorexie, nausées, vomissements, fièvre (38-39°C), défense/rebond, douleur à la marche/toux"
+      ],
+      "responses": [
+        "You're showing RED FLAG symptoms of appendicitis. This is a SURGICAL EMERGENCY - go to ER immediately. Do not eat/drink or take painkillers until evaluated.",
+        "Vous présentez des symptômes ALARMANTS d'appendicite. C'est une URGENCE CHIRURGICALE - allez aux urgences immédiatement. Ne mangez/prenez pas d'antalgiques avant évaluation."
+      ],
+      "context":[""]
+    },
+    {
+      "tag": [ "anxiety", "GAD", "anxiété"],
+      "patterns": [
+        "Excessive worry, restlessness, fatigue, difficulty concentrating, irritability, muscle tension, sleep disturbances, panic attacks",
+        "Inquiétude excessive, agitation, fatigue, difficultés de concentration, irritabilité, tension musculaire, troubles du sommeil, crises de panique"
+      ],
+      "responses": [
+        "You're showing symptoms of generalized anxiety disorder. Consider relaxation techniques and CBT. Seek professional help if: symptoms persist >6 months and impair daily functioning.",
+        "Vous présentez des symptômes de trouble anxieux généralisé. Essayez des techniques de relaxation et TCC. Consultez si : symptômes >6 mois avec retentissement fonctionnel."
+      ],
+      "context": [""]
+       
+    },
+    {
+      "tag": [ "crohns", "IBD", "maladie_de_crohn"],
+      "patterns": [
+        "Chronic diarrhea (often bloody), abdominal pain (RLQ), weight loss, fatigue, perianal lesions (fistulas/abscesses), extraintestinal manifestations (arthritis, uveitis)",
+        "Diarrhée chronique (sanglante), douleurs abdominales (FID), amaigrissement, fatigue, lésions périanales (fistules), manifestations extra-intestinales (arthrite, uvéite)"
+      ],
+      "responses": [
+        "You're showing concerning symptoms of Crohn's disease. This requires gastroenterology evaluation with colonoscopy and imaging. Untreated IBD increases cancer risk.",
+        "Vous présentez des symptômes évocateurs de Crohn. Une évaluation gastroentérologique avec coloscopie est nécessaire. Les MICI non traitées augmentent le risque cancéreux."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["narcolepsy", "hypersomnia", "narcolepsie"],
+      "patterns": [
+        "Excessive daytime sleepiness (sleep attacks), cataplexy (emotional trigger), sleep paralysis, hypnagogic hallucinations, fragmented nighttime sleep",
+        "Somnolence diurne excessive (endormissements brutaux), cataplexie (déclenchée par les émotions), paralysie du sommeil, hallucinations hypnagogiques, sommeil nocturne fragmenté"
+      ],
+      "responses": [
+        "You're showing hallmark symptoms of narcolepsy. This requires sleep study (polysomnography + MSLT) for diagnosis. Stimulants and scheduled naps help manage symptoms.",
+        "Vous présentez des symptômes typiques de narcolepsie. Un bilan du sommeil (polysomnographie + TILE) est nécessaire. Stimulants et siestes programmées aident à contrôler les symptômes."
+      ],
+      "context": [""] 
+    },
+    {
+      "tag": ["cystinuria", "kidney_stones", "cystinurie"],
+      "patterns": [
+        "Renal colic (severe flank pain), hematuria, recurrent UTIs, nausea/vomiting during attacks, stone passage history",
+        "Colique néphrétique (douleur lombaire intense), hématurie, infections urinaires récurrentes, nausées/vomissements lors des crises, antécédents de calculs"
+      ],
+      "responses": [
+        "You're showing symptoms of cystinuria (inherited stone disorder). Increase fluid intake (>3L/day), alkalinize urine, and see urology for 24h urine testing and thiol drugs.",
+        "Vous présentez des symptômes de cystinurie (maladie héréditaire des calculs). Buvez >3L/jour, alcalinisez les urines et consultez un urologue pour bilan urinaire et thiols."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "prostatitis", "CPPS", "prostatite"],
+      "patterns": [
+        "Perineal/low back pain, dysuria, urinary frequency, nocturia, painful ejaculation, fever (acute bacterial form)",
+        "Douleur périnéale/lombaire, dysurie, pollakiurie, nycturie, éjaculation douloureuse, fièvre (forme bactérienne aiguë)"
+      ],
+      "responses": [
+        "You're showing prostatitis symptoms. Acute bacterial cases need prompt antibiotics. Chronic cases may require alpha-blockers, anti-inflammatories, and pelvic floor therapy.",
+        "Vous présentez des symptômes de prostatite. Les formes aiguës bactériennes nécessitent des antibiotiques. Les formes chroniques peuvent requérir alpha-bloquants et kinésithérapie pelvienne."
+      ],
+      "context": [""] 
+    },
+    {
+      "tag": [ "angina", "CAD", "angor"],
+      "patterns": [
+        "Retrosternal chest pressure/pain radiating to left arm/jaw, provoked by exertion, relieved by rest/nitroglycerin, associated dyspnea/diaphoresis",
+        "Pression/douleur rétrosternale irradiant au bras gauche/mâchoire, déclenchée par l'effort, calmée par le repos/trinitrine, associée à dyspnée/sueurs"
+      ],
+      "responses": [
+        "You're showing classic angina symptoms suggesting coronary artery disease. STOP ACTIVITY. Use nitroglycerin if prescribed. Call EMS if pain persists >15 minutes (possible MI).",
+        "Vous présentez des symptômes d'angor. ARRÊTEZ L'ACTIVITÉ. Prenez de la trinitrine si prescrite. Appelez le SAMU si douleur >15 minutes (risque d'IDM)."
+      ],
+      "context": [""]
+      
+    },
+    {
+      "tag": ["wnv", "neuroinvasive", "west_nile"],
+      "patterns": [
+        "Febrile illness (20%): Fever, headache, myalgia, rash. Neuroinvasive (1%): Meningitis (nuchal rigidity), encephalitis (altered mental status), acute flaccid paralysis",
+        "Syndrome fébrile (20%) : Fièvre, céphalées, myalgies, rash. Formes neurologiques (1%) : Méningite (raideur de nuque), encéphalite (troubles de conscience), paralysie flasque aiguë"
+      ],
+      "responses": [
+        "You're showing possible West Nile symptoms. Seek IMMEDIATE care for neurological signs (confusion, weakness). No specific treatment - supportive care only. Prevent mosquito bites.",
+        "Vous présentez des symptômes possibles de West Nile. Consultez URGENCE pour signes neurologiques. Traitement symptomatique uniquement. Prévention contre les moustiques essentielle."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["staph", "sepsis", "staphylococcus"],
+      "patterns": [
+        "Red/swollen skin with pus, high fever (>38.5°C), chills, hypotension (<90mmHg), tachycardia, confusion (in sepsis)",
+        "Peau rouge/gonflée avec pus, forte fièvre (>38,5°C), frissons, hypotension (<90mmHg), tachycardie, confusion (sepsis)"
+      ],
+      "responses": [
+        "EMERGENCY: This may indicate invasive staph infection or sepsis. Seek IMMEDIATE medical care. Do not delay treatment.",
+        "URGENCE : Peut indiquer une infection invasive à staphylocoque ou sepsis. Consultez IMMÉDIATEMENT. Ne retardez pas le traitement."
+      ]
+    },
+    {
+      "tag": ["amd", "macular_degeneration", "dmla"],
+      "patterns": [
+        "Blurred central vision, distorted lines (metamorphopsia), difficulty reading, difficultyrecognizing faces, dark spots (scotomas)",
+        "Vision centrale floue, lignes déformées (métamorphopsies), difficulté à lire, difficulté à reconnaître les visages, taches sombres (scotomes)"
+      ],
+      "responses": [
+        "Schedule urgent ophthalmology evaluation. Use Amsler grid for self-monitoring. AREDS supplements may help dry AMD.",
+        "Consultez un ophtalmologue en urgence. Utilisez une grille d'Amsler. Les compléments AREDS peuvent aider la DMLA sèche."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "retinal_detachment", "retina", "decollement_retine"],
+      "patterns": [
+        "Sudden flashes (photopsia), floaters (especially 'shower'), curtain-like vision loss, peripheral vision defects",
+        "Éclairs soudains (photopsies), corps flottants (surtout 'pluie'), perte visuelle en 'rideau', scotomes périphériques"
+      ],
+      "responses": [
+        "RETINAL EMERGENCY - requires evaluation within 24 hours to prevent permanent vision loss. Do not wait.",
+        "URGENCE RÉTINIENNE - évaluation nécessaire sous 24h pour éviter la cécité. N'attendez pas."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["glaucoma", "ocular_hypertension", "glaucome"],
+      "patterns": [
+        "Peripheral vision loss (tunnel vision in late stages), eye pain,eye redness (acute angle-closure), halos around lights, optic nerve cupping",
+        "Perte vision périphérique (vision tubulaire aux stades tardifs), douleur oculaire,rougeur oculair (glaucome aigu), halos lumineux, excavation papillaire"
+      ],
+      "responses": [
+        "Acute angle-closure is MEDICAL EMERGENCY. Chronic glaucoma requires regular IOP monitoring and lifelong treatment.",
+        "Le glaucome aigu est une URGENCE. Le glaucome chronique nécessite un suivi régulier et un traitement à vie."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "hysterectomy_indications", "uterine_prolapse", "hysterectomie"],
+      "patterns": [
+        "Pelvic pressure, urinary incontinence, back pain, bleeding (fibroids/cancer), protrusion of uterus (prolapse)",
+        "Pression pelvienne, incontinence urinaire, lombalgies, saignements (fibromes/cancer), protrusion utérine (prolapsus)"
+      ],
+      "responses": [
+        "Consult gynecology for pelvic exam and ultrasound. Hysterectomy is one of several treatment options available.",
+        "Consultez un gynécologue pour examen pelvien et échographie. L'hystérectomie est une option parmi d'autres."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["yeast_infection", "candidiasis", "candidose"],
+      "patterns": [
+        "Thick white discharge (cottage cheese-like), vulvar itching/redness, dyspareunia, burning urination",
+        "Pertes blanches épaisses (aspect lait caillé), démangeaisons/rougeurs vulvaires, dyspareunie, brûlures mictionnelles"
+      ],
+      "responses": [
+        "OTC antifungals (clotrimazole) often effective. Seek care if: recurrent (>4x/year), pregnant, or immunocompromised.",
+        "Antifongiques en vente libre (clotrimazole) souvent efficaces. Consultez si : récidives (>4x/an), grossesse ou immunodépression."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["anorexia", "eating_disorder", "anorexie"],
+      "patterns": [
+        "BMI <18.5, fear of weight gain, body dysmorphia, amenorrhea, lanugo hair, cold intolerance, cardiac abnormalities",
+        "IMC <18,5, peur de grossir, dysmorphophobie, aménorrhée, lanugo, intolérance au froid, anomalies cardiaques"
+      ],
+      "responses": [
+        "EMERGENT: This life-threatening disorder requires multidisciplinary care (psychiatry + nutrition + medicine).",
+        "URGENCE : Trouble grave nécessitant prise en charge multidisciplinaire (psychiatrie + nutrition + médecine)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "copd", "chronic_bronchitis", "bpco"],
+      "patterns": [
+        "Progressive dyspnea, chronic productive cough, wheezing, barrel chest, cyanosis (late stage), frequent exacerbations",
+        "Dyspnée progressive, toux productive chronique, sibilances, thorax en tonneau, cyanose (stade tardif), exacerbations fréquentes"
+      ],
+      "responses": [
+        "Requires spirometry for diagnosis. Smoking cessation critical. Vaccinate against flu/pneumonia. Use inhalers as prescribed.",
+        "Nécessite une spirométrie. Arrêt du tabac essentiel. Vaccination grippe/pneumocoque. Utilisez les inhalateurs comme prescrit."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["emphysema", "copd_subtype", "emphyseme"],
+      "patterns": [
+        "Dyspnea on exertion, pursed-lip breathing, decreased breath sounds, hyperinflation on CXR, weight loss",
+        "Dyspnée à l'effort, respiration à lèvres pincées, murmure vésiculaire diminué, hyperinflation à la radio, amaigrissement"
+      ],
+      "responses": [
+        "Pulmonary rehab improves outcomes. Oxygen if hypoxemic. Surgical options (LVRS) in select cases.",
+        "Réhabilitation respiratoire bénéfique. Oxygène si hypoxémie. Chirurgie (RCPC) dans certains cas."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["boils", "furuncles", "furoncles"],
+      "patterns": [
+        "Painful erythematous nodules with central pustule, typically in hair-bearing areas (axilla/groin), may progress to abscess",
+        "Nodules érythémateux douloureux avec pustule centrale, zones pileuses (aisselles/aine), peut évoluer en abcès"
+      ],
+      "responses": [
+        "Apply warm compresses 3-4x/day. Do NOT squeeze. Seek care if: fever develops, size >5cm, or facial location.",
+        "Compresses chaudes 3-4x/jour. Ne pas percer. Consultez si : fièvre, taille >5cm ou localisation faciale."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["keloid", "hypertrophic_scar", "chéloïde"],
+      "patterns": [
+        "Raised, shiny, irregular scars extending beyond original wound, often hyperpigmented, may be painful/pruritic",
+        "Cicatrices surélevées, brillantes, irrégulières, dépassant la plaie initiale, souvent hyperpigmentées, parfois douloureuses/prurigineuses"
+      ],
+      "responses": [
+        "Early intervention with silicone sheets/injections improves outcomes. Surgical excision often recurs without adjuvant therapy.",
+        "Traitement précoce (gels silicone/injections) recommandé. L'excision chirurgicale seule récidive souvent."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "rosacea"],
+      "patterns": [
+        "Facial flushing/blushing, persistent redness, small pus-filled bumps, visible blood vessels, thickening skin (especially nose)",
+        "Rougeurs/bouffées de chaleur au visage, rougeur persistante, petites bosses purulentes, vaisseaux sanguins visibles, épaississement cutané (surtout nez)"
+      ],
+      "responses": [
+        "You're showing classic rosacea symptoms. Avoid triggers (alcohol, spicy foods). Use gentle skincare and consult a dermatologist for prescription treatments.",
+        "Vous présentez des symptômes typiques de rosacée. Évitez les déclencheurs (alcool, épices). Utilisez des soins doux et consultez un dermatologue."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["shingles", "herpes_zoster"],
+      "patterns": [
+        "Burning/tingling rash (one side only), fluid-filled blisters, extreme sensitivity, fever, chills. Commonly affects torso or face.",
+        "Éruption brûlante/picotante (un seul côté), vésicules, hypersensibilité, fièvre,frissons. Souvent sur torse ou visage."
+      ],
+      "responses": [
+        "URGENT: Shingles requires antiviral medication within 72 hours of rash appearance. Seek immediate medical care to prevent complications.",
+        "URGENCE : Le zona nécessite des antiviraux sous 72h après l'éruption. Consultez immédiatement pour éviter des complications."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "dandruff", "seborrheic_dermatitis"],
+      "patterns": [
+        "White/yellow flakes on scalp/hair, itchy scalp, scaly patches (eyebrows/nose)",
+        "Pellicules blanches/jaunes, démangeaisons, plaques squameuses (sourcils/nez)"
+      ],
+      "responses": [
+        "Use medicated anti-dandruff shampoos (containing zinc pyrithione or ketoconazole). See a doctor if redness/spreading occurs.",
+        "Utilisez des shampoings traitants (zinc pyrithione/kétoconazole). Consultez si rougeurs/extension."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "acne"],
+      "patterns": [
+        "Blackheads/whiteheads, pus-filled pimples, painful nodules (chin/forehead/back), oily skin",
+        "Points noirs/comédons, boutons purulents, nodules douloureux (menton/front/dos), peau grasse"
+      ],
+      "responses": [
+        "Clean skin gently twice daily. Avoid picking. Over-the-counter benzoyl peroxide helps. Severe cases need dermatology care.",
+        "Nettoyez la peau 2x/jour. Ne percez pas. Peroxyde de benzoyle en automédication. Cas sévères : consultez un dermatologue."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "warts", "common_wart"],
+      "patterns": [
+        "Flesh-colored rough bumps, black pinpoints (clotted blood vessels), commonly on hands/fingers",
+        "Bosse rugueuse couleur chair, points noirs (vaisseaux sanguins), souvent sur mains/doigts"
+      ],
+      "responses": [
+        "Most warts resolve in 2 years. Salicylic acid treatments help. Freezing (cryotherapy) by a doctor is faster.",
+        "La plupart disparaissent en 2 ans. Traitements à l'acide salicylique. Cryothérapie médicale plus rapide."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["scleroderma"],
+      "patterns": [
+        "Skin thickening/tightening (fingers/hands/face), Raynaud's phenomenon, red spots, joint pain",
+        "Épaississement cutané (doigts/mains/visage), phénomène de Raynaud, taches rouges, douleurs articulaires"
+      ],
+      "responses": [
+        "This autoimmune condition requires rheumatology evaluation. Early treatment prevents organ damage.",
+        "Cette maladie auto-immune nécessite un bilan rhumatologique. Traitement précoce essentiel."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "lichen_planus"],
+      "patterns": [
+        "Purple itchy flat bumps (wrists/ankles), white lace-like mouth patches, nail changes",
+        "Bosses plates violacées (poignets/chevilles), plaques blanches en dentelle (bouche), anomalies des ongles"
+      ],
+      "responses": [
+        "Topical corticosteroids often help. Oral lesions need monitoring for cancer risk.",
+        "Corticoïdes locaux généralement efficaces. Lésions buccales nécessitent surveillance."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["dementia"],
+      "patterns": [
+        "Memory loss affecting daily life, confusion with time/place, difficulty with familiar tasks, personality changes",
+        "Perte de mémoire gênante, confusion temporelle/spatiale, difficultés pour les tâches familières, changements de personnalité"
+      ],
+      "responses": [
+        "Schedule a cognitive evaluation. Early diagnosis of Alzheimer's/dementia allows better management.",
+        "Bilan cognitif nécessaire. Diagnostic précoce important pour la prise en charge."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": ["hives", "urticaria"],
+      "patterns": [
+        "Raised red welts (various sizes), intense itching, swelling (lips/eyelids), lasts <24h per welt",
+        "Plaques rouges surélevées, démangeaisons intenses, gonflements (lèvres/paupières), durée <24h par lésion"
+      ],
+      "responses": [
+        "Antihistamines provide relief. Seek emergency care if throat swelling or breathing difficulty occurs.",
+        "Antihistaminiques utiles. Urgence si gonflement de la gorge ou difficultés respiratoires."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": [ "bulimia"],
+      "patterns": [
+        "Binge eating followed by purging (vomiting/laxatives), tooth erosion, swollen cheeks, electrolyte imbalances",
+        "Crises de boulimie suivies de vomissements/laxatifs, érosion dentaire, joues gonflées, déséquilibres électrolytiques"
+      ],
+      "responses": [
+        "This life-threatening eating disorder requires psychiatric + nutritional care. Confidential help is available.",
+        "Trouble alimentaire grave nécessitant prise en charge psychiatrique et nutritionnelle."
+      ],
+      "context": [""]
+    }
+  ]
+}

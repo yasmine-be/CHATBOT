@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Assistant Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="bot-avatar">
+                <i class="fas fa-user-md"></i>
+            </div>
+            <div class="header-info">
+                <h2>Health Assistant</h2>
+                <p>Online</p>
+            </div>
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>Hello! I'm your Health Assistant. How can I help you today?</p>
+                </div>
+                <div class="message-time">10:00 AM</div>
+            </div>
+            
+            <div class="quick-replies">
+                <button class="quick-reply-btn">I have a headache</button>
+                <button class="quick-reply-btn">I feel feverish</button>
+                <button class="quick-reply-btn">Stomach pain</button>
+                <button class="quick-reply-btn">Allergy symptoms</button>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your health concern...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+            <button id="mic-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
