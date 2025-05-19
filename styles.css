@@ -21,14 +21,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 20px;
 }
 
 .chat-container {
     width: 100%;
     max-width: 500px;
-    height: 700px;
+    height: 550px;
     background-color: var(--white);
     border-radius: 15px;
     box-shadow: var(--shadow);

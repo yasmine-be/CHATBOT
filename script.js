@@ -116,6 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Disclaimer message after 5 seconds
     setTimeout(() => {
-        addMessage("Note: This is a demo chatbot and doesn't provide real medical diagnosis. Always consult a healthcare professional for medical advice.", false);
+        addMessage("Note : Ce chatbot est une démonstration et ne fournit pas de diagnostic médical. Consultez toujours un professionnel de santé pour des conseils médicaux", false);
     }, 5000);
 });
