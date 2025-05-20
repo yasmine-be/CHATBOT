@@ -4,16 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendBtn = document.getElementById('send-btn');
     const quickReplyBtns = document.querySelectorAll('.quick-reply-btn');
     
-    // Sample responses for the bot
-    const botResponses = {
-        "hello": "Hello! How can I assist you with your health today?",
-        "headache": "Headaches can have various causes. Have you been drinking enough water? Have you taken any pain relief medication?",
-        "fever": "A fever is often a sign of infection. What is your temperature? Have you experienced any other symptoms?",
-        "stomach": "Stomach pain can result from many issues. Can you describe the pain? Is it sharp, dull, or cramping?",
-        "allergy": "Allergy symptoms often include sneezing, itching, or rash. Have you been exposed to any potential allergens?",
-        "default": "I'm not sure I understand. Could you provide more details about your symptoms?"
-    };
-    
     // Function to add a message to the chat
     function addMessage(text, isUser) {
         const messageDiv = document.createElement('div');
@@ -25,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
         contentDiv.innerHTML = `<p>${text}</p>`;
         
         const timeDiv = document.createElement('div');
+        timeDiv.classList.add('message-time');
+        timeDiv.textContent = getCurrentTime();
+        
+        messageDiv.appendChild(contentDiv);
         timeDiv.classList.add('message-time');
         timeDiv.textContent = getCurrentTime();
         
@@ -46,31 +40,59 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${hours}:${minutes} ${ampm}`;
     }
     
-    // Function to process user input and generate bot response
-    function processUserInput(input) {
-        input = input.toLowerCase().trim();
-        let response = botResponses.default;
-        
-        if (input.includes('hello') || input.includes('hi')) {
-            response = botResponses.hello;
-        } else if (input.includes('headache')) {
-            response = botResponses.headache;
-        } else if (input.includes('fever') || input.includes('feverish')) {
-            response = botResponses.fever;
-        } else if (input.includes('stomach') || input.includes('belly')) {
-            response = botResponses.stomach;
-        } else if (input.includes('allergy') || input.includes('allergic')) {
-            response = botResponses.allergy;
-        }
-        
-        // Simulate typing delay
-        setTimeout(() => {
-            addMessage(response, false);
+    // Function to send message to backend and get response
+    async function sendToBackend(message) {
+        try {
+            const response = await fetch('http://localhost:5000/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: message })
+            });
             
-            // Add disclaimer after bot response
-            setTimeout(() => {
-                addMessage("Remember, I'm not a substitute for professional medical advice. If symptoms persist or worsen, please consult a doctor.", false);
-            }, 1000);
+            const data = await response.json();
+            return data.response;
+        } catch (error) {
+            console.error('Error:', error);
+            return "I'm having trouble connecting to the server. Please try again later.";
+        }
+    }
+    
+    // Function to process user input and generate bot response
+    async function processUserInput(input) {
+        input = input.trim();
+        if (!input) return;
+        
+        addMessage(input, true);
+        
+        // Show typing indicator
+        const typingIndicator = document.createElement('div');
+        typingIndicator.classList.add('message', 'bot-message');
+        typingIndicator.innerHTML = `
+            <div class="message-content">
+                <div class="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        `;
+        chatMessages.appendChild(typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        // Get response from backend
+        const response = await sendToBackend(input);
+        
+        // Remove typing indicator
+        chatMessages.removeChild(typingIndicator);
+        
+        // Add bot response
+        addMessage(response, false);
+        
+        // Add disclaimer after bot response
+        setTimeout(() => {
+            addMessage("Remember, I'm not a substitute for professional medical advice. If symptoms persist or worsen, please consult a doctor.", false);
         }, 1000);
     }
     
@@ -78,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
     sendBtn.addEventListener('click', function() {
         const message = userInput.value.trim();
         if (message) {
-            addMessage(message, true);
             userInput.value = '';
             processUserInput(message);
         }
@@ -89,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'Enter') {
             const message = userInput.value.trim();
             if (message) {
-                addMessage(message, true);
                 userInput.value = '';
                 processUserInput(message);
             }
@@ -100,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
     quickReplyBtns.forEach(button => {
         button.addEventListener('click', function() {
             const message = this.textContent;
-            addMessage(message, true);
             processUserInput(message);
         });
     });
