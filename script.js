@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatMessages = document.getElementById('chat-messages');
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
-    const micBtn = document.getElementById('mic-btn');
     const quickReplyBtns = document.querySelectorAll('.quick-reply-btn');
     
     // Sample responses for the bot
@@ -104,14 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
             addMessage(message, true);
             processUserInput(message);
         });
-    });
-    
-    // Simulate microphone button click (would need additional code for actual voice recognition)
-    micBtn.addEventListener('click', function() {
-        addMessage("[Voice message]", true);
-        setTimeout(() => {
-            addMessage("I'm sorry, voice input isn't implemented in this demo. Please type your message.", false);
-        }, 1000);
     });
     
     // Disclaimer message after 5 seconds
