@@ -9,7 +9,8 @@ from keras.layers import Dense, Activation, Dropout
 from keras.optimizers import SGD
 import random
 
-# Download required NLTK data
+
+
 nltk.download('punkt')
 nltk.download('wordnet')
 
@@ -20,7 +21,7 @@ ignore_words = ['?', '!']
 data_file = open('data.json').read()
 intents = json.loads(data_file)
 
-# Populate classes, ensuring tags are strings
+
 for intent in intents['intents']:
     for pattern in intent['patterns']:
         w = nltk.word_tokenize(pattern)

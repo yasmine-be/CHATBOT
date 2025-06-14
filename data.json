@@ -2,40 +2,61 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Hey", "Hello", "Hi", "Good morning", "Good afternoon"],
+      "patterns": [
+        "Hey there",
+        "Hello, how are you?",
+        "Hi, I need help",
+        "Good morning!",
+        "Good afternoon, can you assist me?"
+      ],
       "responses": ["Hello! How can I assist you with your health concerns today?"],
       "context": [""]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "Goodbye", "See you", "Talk later"],
+      "patterns": [
+        "Bye for now",
+        "Goodbye, thanks",
+        "See you later",
+        "Talk to you later"
+      ],
       "responses": ["Goodbye! Take care and consult a doctor if needed."],
       "context": [""]
     },
     {
       "tag": "creator",
-      "patterns": ["Who made you?", "Who is your Creator?", "Your developer", "Who created you"],
+      "patterns": [
+        "Who made you?",
+        "Who is your creator?",
+        "Who developed you?",
+        "Who created this chatbot?"
+      ],
       "responses": ["I was developed by Yasmine Berred (yb) as a medical assistant bot."],
       "context": [""]
     },
     {
       "tag": "functions",
-      "patterns": ["What can You do?", "What is Your Functionalities?", "Uses", "functions", "Your capabilities"],
+      "patterns": [
+        "What can you do?",
+        "What are your functions?",
+        "How can you help me?",
+        "What are your capabilities?"
+      ],
       "responses": ["I analyze symptoms and suggest possible conditions. Always consult a doctor for proper diagnosis."],
       "context": [""]
     },
     {
       "tag": "allergies",
       "patterns": [
-        "nasal congestion itchy watery eyes sneezing runny nose sore throat",
-        "nasal congestion itchy watery eyes sneezing",
-        "itchy eyes and runny nose",
-        "sneezing and nasal congestion",
-        "skin rash or hives",
-        "swelling of face or lips",
-        "wheezing coughing chest tightness",
-        "shortness of breath after exposure",
-        "nausea vomiting after eating"
+        "My nose is stuffy a",
+        "I'm sneezing a lot and my nose is running",
+        "I have itchy eyes and a runny nose",
+        "I'm sneezing and my nose feels congested",
+        "I have a skin rash or hives",
+        "My face or lips are swelling",
+        "I'm wheezing and coughing with chest tightness",
+        "I'm short of breath after being around something",
+        "I feel nauseous and vomited after eating something"
       ],
       "responses": ["You may have an allergy. Try to avoid what causes the symptoms and see a doctor if it gets worse."],
       "context": [""]
@@ -43,12 +64,12 @@
     {
       "tag": "anemia",
       "patterns": [
-        "Fatigue weakness dizziness pale skin",
-        "shortness of breath rapid heartbeat",
-        "cold hands cold feet headaches",
-        "brittle nails chest pain",
-        "brain fog unusual cravings",
-        "leg cramps restless legs"
+        "I'm always tired, weak, and dizzy with pale skin",
+        "I'm short of breath and my heart is racing",
+        "My hands and feet are cold and I get headaches",
+        "My nails are brittle and I have chest pain",
+        "I feel foggy and crave unusual things",
+        "My legs cramp and feel restless"
       ],
       "responses": ["You are showing symptoms of anemia, possibly due to iron deficiency, vitamin B12 deficiency, or other causes. Consult a doctor for proper diagnosis."],
       "context": [""]
@@ -56,12 +77,12 @@
     {
       "tag": "cold",
       "patterns": [
-        "Headache body aches fever chills",
-        "nasal congestion runny nose",
-        "sneezing cough sore throat",
-        "fatigue mild chest discomfort",
-        "watery eyes loss of taste",
-        "loss of smell swollen lymph nodes"
+        "I have a headache, body aches, and feel feverish",
+        "My nose is congested and runny",
+        "I'm sneezing, coughing, and my throat is sore",
+        "I'm tired and have mild chest discomfort",
+        "My eyes are watery and I can't taste much",
+        "I lost my sense of smell and my lymph nodes are swollen"
       ],
       "responses": ["You are showing symptoms of a **cold** or **flu**. Rest, hydrate, and consider over-the-counter relief. If fever is high (>38.5°C/101°F) or breathing difficulties occur, seek medical help."],
       "context": [""]
@@ -69,12 +90,12 @@
     {
       "tag": "asthma",
       "patterns": [
-        "Shortness of breath chest tightness",
-        "wheezing whistling sound when breathing",
-        "coughing worse at night",
-        "difficulty speaking rapid breathing",
-        "anxiety triggered by breathing",
-        "fatigue from labored breathing"
+        "I'm short of breath and my chest feels tight",
+        "I hear a wheezing sound when I breathe",
+        "My coughing gets worse at night",
+        "I can barely speak and I'm breathing fast",
+        "I feel anxious because breathing is hard",
+        "I'm exhausted from struggling to breathe"
       ],
       "responses": ["You are showing symptoms of asthma. Avoid triggers (dust, pollen, smoke), use prescribed inhalers if available, and seek medical attention if symptoms worsen or breathing becomes severely difficult."],
       "context": [""]
@@ -82,12 +103,12 @@
     {
       "tag": "pregnancy",
       "patterns": [
-        "Missed period breast tenderness",
-        "food cravings nausea vomiting",
-        "morning sickness frequent urination",
-        "fatigue mood swings",
-        "light spotting heightened smell",
-        "bloating mild pelvic cramping"
+        "I missed my period and my breasts are tender",
+        "I'm craving food and feel nauseous",
+        "I have morning sickness and pee a lot",
+        "I'm so tired and my mood is all over the place",
+        "I had lightnd my eyes are itchy and watery spotting and my sense of smell is stronger",
+        "I feel bloated and have mild pelvic cramps"
       ],
       "responses": ["You are showing common early signs of pregnancy. Consider taking a home pregnancy test. For confirmation, schedule an appointment with a healthcare provider to begin prenatal care if positive."],
       "context": [""]
@@ -95,12 +116,12 @@
     {
       "tag": "hyperthyroid",
       "patterns": [
-        "Rapid heart rate excessive sweating",
-        "heat intolerance hand tremors",
-        "nervousness agitation",
-        "fatigue weight loss",
-        "hair thinning hair loss",
-        "muscle weakness diarrhea"
+        "My heart is racing and I'm sweating a lot",
+        "I can't stand heat and my hands are shaking",
+        "I'm nervous and agitated all the time",
+        "I'm tired but losing weight",
+        "My hair is thinning and falling out",
+        "I have muscle weakness and diarrhea"
       ],
       "responses": ["You are showing classic symptoms of hyperthyroidism (overactive thyroid). This requires medical evaluation with blood tests (TSH, T3/T4). Untreated hyperthyroidism can lead to serious complications like heart problems or thyroid storm. Please consult a doctor promptly."],
       "context": [""]
@@ -108,12 +129,12 @@
     {
       "tag": "hypothyroid",
       "patterns": [
-        "Fatigue depression weight gain",
-        "cold intolerance sleepiness",
-        "dry skin coarse skin",
-        "muscle cramps weakness",
-        "constipation hair loss",
-        "brittle nails hoarse voice"
+        "I'm exhausted, depressed, and gaining weight",
+        "I feel cold all the time and I'm sleepy",
+        "My skin is dry and feels coarse",
+        "I have muscle cramps and feel weak",
+        "I'm constipated and my hair is falling out",
+        "My nails are brittle and my voice is hoarse"
       ],
       "responses": ["You are showing classic symptoms of hypothyroidism (underactive thyroid). This requires blood tests (TSH, T4) for diagnosis. Hypothyroidism is easily treatable with thyroid hormone replacement. Please see a doctor for evaluation."],
       "context": [""]
@@ -121,12 +142,12 @@
     {
       "tag": "diabetes",
       "patterns": [
-        "Excessive thirst frequent urination",
-        "extreme hunger weight loss",
-        "fatigue blurred vision",
-        "slow healing wounds",
-        "frequent infections dry mouth",
-        "tingling numbness in hands"
+        "I'm so thirsty and peeing all the time",
+        "I'm really hungry but losing weight",
+        "I'm tired and my vision is blurry",
+        "My wounds heal slowly",
+        "I keep getting infections and my mouth is dry",
+        "My hands are tingling and numb"
       ],
       "responses": ["You are showing classic symptoms of diabetes. This requires urgent medical evaluation with blood glucose testing (fasting sugar or HbA1c). Untreated diabetes can lead to dangerous complications. Please see a doctor within 24-48 hours."],
       "context": [""]
@@ -134,12 +155,12 @@
     {
       "tag": "hypertension",
       "patterns": [
-        "Severe headache dizziness",
-        "shortness of breath blurred vision",
-        "nosebleeds blood in urine",
-        "fatigue confusion chest pain",
-        "buzzing in ears irregular heartbeat",
-        "facial flushing difficulty sleeping"
+        "I have a severe headache and feel dizzy",
+        "I'm short of breath and my vision is blurred",
+        "I get nosebleeds and there's blood in my urine",
+        "I'm tired, confused, and have chest pain",
+        "My ears are buzzing and my heartbeat is irregular",
+        "My face is flushed and I can't sleep"
       ],
       "responses": ["You are showing potentially dangerous symptoms of severe hypertension (high blood pressure). This requires IMMEDIATE medical attention as it may indicate hypertensive crisis (>180/120 mmHg) which can lead to stroke or organ damage. Call emergency services if experiencing chest pain/severe headache."],
       "context": [""]
@@ -147,12 +168,12 @@
     {
       "tag": "hiv",
       "patterns": [
-        "High fever swollen lymph nodes",
-        "severe fatigue rash",
-        "muscle joint pain sore throat",
-        "mouth ulcers night sweats",
-        "chills headache diarrhea",
-        "rapid weight loss chronic diarrhea"
+        "I have a high fever and swollen lymph nodes",
+        "I'm really tired and have a rash",
+        "My muscles and joints hurt and my throat is sore",
+        "I have mouth ulcers and night sweats",
+        "I'm getting chills, headaches, and diarrhea",
+        "I'm losing weight fast and have chronic diarrhea"
       ],
       "responses": ["You are showing symptoms that may indicate acute HIV infection (especially if recent exposure within 2-6 weeks). URGENT testing is required - modern HIV treatments can prevent progression to AIDS if started early. Seek immediate medical care for PEP (post-exposure prophylaxis) if exposure occurred <72 hours ago."],
       "context": [""]
@@ -160,12 +181,12 @@
     {
       "tag": "panic_attack",
       "patterns": [
-        "Sudden racing heart pounding heart",
-        "chest pain shortness of breath",
-        "trembling shaking sweating",
-        "choking sensation nausea",
-        "dizziness lightheadedness",
-        "numbness tingling fear"
+        "My heart is racing out of nowhere",
+        "I have chest pain and can't breathe well",
+        "I'm trembling, shaking, and sweating",
+        "I feel like I'm choking and nauseous",
+        "I'm dizzy and lightheaded",
+        "My hands are numb and I'm terrified"
       ],
       "responses": ["You're experiencing symptoms of a panic attack. While frightening, these episodes are not life-threatening. Try slow breathing (4-7-8 technique: inhale 4s, hold 7s, exhale 8s) and grounding exercises (name 5 things you see). Seek medical evaluation to rule out cardiac causes, especially if first episode."],
       "context": [""]
@@ -173,11 +194,11 @@
     {
       "tag": "bone_tumor",
       "patterns": [
-        "Persistent bone pain swelling",
-        "tenderness unexplained fractures",
-        "palpable lump weight loss",
-        "fatigue limited joint mobility",
-        "numbness weakness fever"
+        "My bone hurts all the time and it's swollen",
+        "I have tenderness and unexplained fractures",
+        "I feel a lump and I'm losing weight",
+        "I'm tired and my joints don't move well",
+        "I'm numb, weak, and have a fever"
       ],
       "responses": ["You are showing concerning symptoms of possible bone pathology. These symptoms REQUIRE urgent orthopedic evaluation with imaging (X-ray/MRI) and possibly biopsy. While most bone lesions are benign, early detection of malignant tumors significantly improves outcomes."],
       "context": [""]
@@ -185,12 +206,12 @@
     {
       "tag": "malaria",
       "patterns": [
-        "Cyclic fever chills rigors",
-        "severe headache nausea vomiting",
-        "profuse sweating fatigue",
-        "muscle joint pain abdominal pain",
-        "diarrhea anemia jaundice",
-        "confusion cerebral malaria"
+        "I have a fever and chills that come and go",
+        "I get severe headaches, nausea, and vomiting",
+        "I'm sweating a lot and feel exhausted",
+        "My muscles and joints hurt and my stomach aches",
+        "I have diarrhea, anemia, and jaundice",
+        "I'm confused and might have cerebral malaria"
       ],
       "responses": ["You are showing classic symptoms of malaria. This is a MEDICAL EMERGENCY if you've been in a malaria-endemic area recently. Immediate testing (blood smear/RDT) and treatment are required - severe malaria can be fatal within 24 hours. Seek care NOW if you have any fever after tropical travel."],
       "context": [""]
@@ -198,12 +219,12 @@
     {
       "tag": "dengue",
       "patterns": [
-        "High fever severe headache",
-        "muscle pain joint pain",
-        "nausea vomiting rash",
-        "mild bleeding fatigue",
-        "swollen glands abdominal pain",
-        "persistent vomiting bleeding"
+        "I have a high fever and a bad headache",
+        "My muscles and joints are aching",
+        "I'm nauseous, vomiting, and have a rash",
+        "I'm bleeding a little and feel tired",
+        "My glands are swollen and my stomach hurts",
+        "I keep vomiting and there's bleeding"
       ],
       "responses": ["You are showing symptoms of dengue fever. This requires URGENT medical attention if you've been in a dengue-endemic area. Watch for warning signs of severe dengue (hemorrhagic fever) - these appear 3-7 days after first symptoms and REQUIRE IMMEDIATE HOSPITALIZATION. Hydrate frequently and avoid NSAIDs (use paracetamol only)."],
       "context": [""]
@@ -211,12 +232,12 @@
     {
       "tag": "hepatitis_b",
       "patterns": [
-        "Fatigue loss of appetite",
-        "nausea vomiting jaundice",
-        "yellow skin dark urine",
-        "clay stools abdominal pain",
-        "joint pain fever itching",
-        "liver tenderness confusion"
+        "I'm really tired and have no appetite",
+        "I'm nauseous, vomiting, and have jaundice",
+        "My skin is yellow and my urine is dark",
+        "My stools are clay-colored and my stomach hurts",
+        "My joints ache and I have a fever and itching",
+        "My liver feels tender and I'm confused"
       ],
       "responses": ["You are showing classic symptoms of Hepatitis B infection. This requires URGENT medical evaluation with blood tests (HBsAg, liver function tests). Acute HBV can become chronic if untreated, leading to cirrhosis/liver cancer. Practice strict precautions to prevent transmission (blood/body fluids). Vaccination is available for contacts."],
       "context": [""]
@@ -224,12 +245,12 @@
     {
       "tag": "paronychia",
       "patterns": [
-        "Redness swelling pain near nail",
-        "pus abscess warm touch",
-        "recurrent inflammation nail folds",
-        "crinkled nails ridges",
-        "green discoloration nail separation",
-        "missing cuticle"
+        "My nail area is red, swollen, and painful",
+        "There's pus and it's warm to the touch",
+        "My nail folds keep getting inflamed",
+        "My nails are crinkled with ridges",
+        "My nail is green and separating",
+        "My cuticle is missing"
       ],
       "responses": ["You're showing symptoms of paronychia (nail fold infection). For acute cases: Soak in warm water 3-4x daily, avoid nail biting. If pus present or symptoms persist >48 hours, seek medical care for possible drainage/antibiotics. Chronic cases require identifying/treating underlying causes (eczema, diabetes)."],
       "context": [""]
@@ -237,12 +258,12 @@
     {
       "tag": "pancreatic_cancer",
       "patterns": [
-        "Persistent upper abdominal pain",
-        "unexplained weight loss",
-        "loss of appetite jaundice",
-        "dark urine pale stools",
-        "new onset diabetes nausea",
-        "floating oily stools fatigue"
+        "I have persistent pain in my upper stomach",
+        "I'm losing weight for no reason",
+        "I have no appetite and have jaundice",
+        "My urine is dark and my stools are pale",
+        "I got diabetes recently and feel nauseous",
+        "My stools are oily and float, and I'm tired"
       ],
       "responses": ["You are showing concerning symptoms that may indicate pancreatic cancer. These require URGENT medical evaluation with imaging (CT/MRI) and tumor marker tests (CA19-9). Early detection significantly improves outcomes. Seek immediate attention if jaundice or persistent pain develops, especially with weight loss."],
       "context": [""]
@@ -250,12 +271,12 @@
     {
       "tag": "chickenpox",
       "patterns": [
-        "Fever itchy rash red spots",
-        "fluid blisters crusts",
-        "fatigue headache appetite loss",
-        "rash face chest spreads",
-        "scalp mouth genitals affected",
-        "all stages coexist"
+        "I have a fever and an itchy rash with red spots",
+        "I have fluid-filled blisters that crust over",
+        "I'm tired, have a headache, and no appetite",
+        "The rash is on my face, chest, and spreading",
+        "I have a rash on my scalp, mouth, and genitals",
+        "My rash has spots, blisters, and crusts at once"
       ],
       "responses": ["You're showing classic symptoms of chickenpox (varicella). ISOLATE immediately - highly contagious until all blisters crust. Use calamine lotion/cool baths for itching. Avoid scratching to prevent scarring. Seek URGENT care if: high fever >39°C, breathing difficulty, rash near eyes, or confusion develops."],
       "context": [""]
@@ -263,11 +284,11 @@
     {
       "tag": "jaundice",
       "patterns": [
-        "Yellow skin yellow sclerae",
-        "poor feeding lethargy",
-        "high pitched crying",
-        "floppiness stiffness",
-        "arched back fever seizures"
+        "My skin and eyes are turning yellow",
+        "I'm not feeding well and feel lethargic",
+        "I have a high-pitched cry",
+        "I'm floppy or stiff",
+        "I'm arching my back and have a fever or seizures"
       ],
       "responses": ["This baby is showing symptoms of significant neonatal jaundice that may indicate dangerous bilirubin levels. This is a MEDICAL EMERGENCY - untreated high bilirubin can cause permanent brain damage (kernicterus). Seek IMMEDIATE pediatric evaluation with bilirubin testing. Breastfeed frequently (10-12x/day) to help excretion."],
       "context": [""]
@@ -275,12 +296,12 @@
     {
       "tag": "diarrhea",
       "patterns": [
-        "Frequent loose watery stools",
-        "abdominal cramping urgency",
-        "bloating nausea vomiting",
-        "low grade fever malaise",
-        "dry mouth sunken eyes",
-        "reduced urine dizziness"
+        "I have frequent loose, watery stools",
+        "My stomach is cramping and I feel urgent",
+        "I'm bloated, nauseous, and vomiting",
+        "I have a low-grade fever and feel unwell",
+        "My mouth is dry and my eyes look sunken",
+        "I'm not peeing much and feel dizzy"
       ],
       "responses": ["You're experiencing acute diarrhea. Priority is rehydration - drink oral rehydration solutions (ORS) frequently. Eat bland foods (BRAT diet: Bananas, Rice, Applesauce, Toast). Seek medical care if: dehydration signs appear, symptoms persist >2 days, or if you see blood in stool. Avoid anti-diarrheals initially in infectious cases."],
       "context": [""]
@@ -288,12 +309,12 @@
     {
       "tag": "indigestion",
       "patterns": [
-        "Upper abdominal discomfort",
-        "early satiety fullness",
-        "bloating nausea vomiting",
-        "belching heartburn",
-        "weight loss difficulty swallowing",
-        "anemia family history cancer"
+        "I feel discomfort in my upper stomach",
+        "I feel full quickly when eating",
+        "I'm bloated, nauseous, and vomiting",
+        "I'm burping and have heartburn",
+        "I'm losing weight and have trouble swallowing",
+        "I'm anemic and my family has a history of cancer"
       ],
       "responses": ["You're showing symptoms of dyspepsia (indigestion). Try eating smaller meals, avoiding triggers (fatty/spicy foods, caffeine), and elevating your head at night. If symptoms persist >2 weeks or you develop alarm features (weight loss, vomiting blood), seek medical evaluation to rule out ulcers or other conditions."],
       "context": [""]
@@ -301,11 +322,11 @@
     {
       "tag": "constipation",
       "patterns": [
-        "Few bowel movements hard stools",
-        "straining incomplete evacuation",
-        "lower abdominal discomfort",
-        "anal fissures bleeding",
-        "bloating"
+        "I have few bowel movements and hard stools",
+        "I'm straining and feel incomplete evacuation",
+        "My lower stomach feels uncomfortable",
+        "I have anal fissures and bleeding",
+        "I'm bloated and uncomfortable"
       ],
       "responses": ["You're showing symptoms of constipation. Increase fiber intake (25-30g/day), drink more water, and exercise regularly. Seek medical care if: symptoms persist >3 weeks, you see blood in stool, or experience unexplained weight loss."],
       "context": [""]
@@ -313,11 +334,11 @@
     {
       "tag": "appendicitis",
       "patterns": [
-        "Periumbilical pain RLQ",
-        "anorexia nausea vomiting",
-        "fever rebound tenderness",
-        "guarding pain walking",
-        "pain coughing"
+        "I have pain around my belly button moving to the right",
+        "I have no appetite, feel nauseous, and am vomiting",
+        "I have a fever and pain when I press my stomach",
+        "My stomach hurts when I walk",
+        "It hurts when I cough"
       ],
       "responses": ["You're showing RED FLAG symptoms of appendicitis. This is a SURGICAL EMERGENCY - go to ER immediately. Do not eat/drink or take painkillers until evaluated."],
       "context": [""]
@@ -325,10 +346,10 @@
     {
       "tag": "anxiety",
       "patterns": [
-        "Excessive worry restlessness",
-        "fatigue difficulty concentrating",
-        "irritability muscle tension",
-        "sleep disturbances panic attacks"
+        "I'm worrying too much and feel restless",
+        "I'm tired and can't focus",
+        "I'm irritable and my muscles are tense",
+        "I can't sleep and have panic attacks"
       ],
       "responses": ["You're showing symptoms of generalized anxiety disorder. Consider relaxation techniques and CBT. Seek professional help if: symptoms persist >6 months and impair daily functioning."],
       "context": [""]
@@ -336,11 +357,11 @@
     {
       "tag": "crohns",
       "patterns": [
-        "Chronic diarrhea bloody",
-        "abdominal pain RLQ",
-        "weight loss fatigue",
-        "perianal lesions fistulas",
-        "extraintestinal arthritis uveitis"
+        "I have chronic bloody diarrhea",
+        "My lower right stomach hurts",
+        "I'm losing weight and feel tired",
+        "I have perianal lesions or fistulas",
+        "I have arthritis or eye inflammation"
       ],
       "responses": ["You're showing concerning symptoms of Crohn's disease. This requires gastroenterology evaluation with colonoscopy and imaging. Untreated IBD increases cancer risk."],
       "context": [""]
@@ -348,10 +369,10 @@
     {
       "tag": "narcolepsy",
       "patterns": [
-        "Excessive daytime sleepiness",
-        "sleep attacks cataplexy",
-        "sleep paralysis hallucinations",
-        "fragmented nighttime sleep"
+        "I'm excessively sleepy during the day",
+        "I have sudden sleep attacks or muscle weakness",
+        "I experience sleep paralysis or hallucinations",
+        "My nighttime sleep is fragmented"
       ],
       "responses": ["You're showing hallmark symptoms of narcolepsy. This requires sleep study (polysomnography + MSLT) for diagnosis. Stimulants and scheduled naps help manage symptoms."],
       "context": [""]
@@ -359,10 +380,10 @@
     {
       "tag": "cystinuria",
       "patterns": [
-        "Renal colic flank pain",
-        "hematuria recurrent UTIs",
-        "nausea vomiting attacks",
-        "stone passage history"
+        "I have sharp pain in my side or lower back",
+        "I see blood in my urine and keep getting UTIs",
+        "I'm nauseous and vomiting during pain attacks",
+        "I've passed kidney stones before"
       ],
       "responses": ["You're showing symptoms of cystinuria (inherited stone disorder). Increase fluid intake (>3L/day), alkalinize urine, and see urology for 24h urine testing and thiol drugs."],
       "context": [""]
@@ -370,9 +391,9 @@
     {
       "tag": "prostatitis",
       "patterns": [
-        "Perineal low back pain",
-        "dysuria frequency nocturia",
-        "painful ejaculation fever"
+        "I have pain in my pelvic area or lower back",
+        "It hurts to pee and I go a lot at night",
+        "I have fever and pain during ejaculation"
       ],
       "responses": ["You're showing prostatitis symptoms. Acute bacterial cases need prompt antibiotics. Chronic cases may require alpha-blockers, anti-inflammatories, and pelvic floor therapy."],
       "context": [""]
@@ -380,10 +401,10 @@
     {
       "tag": "angina",
       "patterns": [
-        "Retrosternal chest pressure",
-        "pain left arm jaw",
-        "provoked exertion relieved rest",
-        "dyspnea diaphoresis"
+        "I feel pressure in my chest",
+        "Pain spreads to my left arm or jaw",
+        "Pain starts with exercise and stops with rest",
+        "I'm short of breath and sweating"
       ],
       "responses": ["You're showing classic angina symptoms suggesting coronary artery disease. STOP ACTIVITY. Use nitroglycerin if prescribed. Call EMS if pain persists >15 minutes (possible MI)."],
       "context": [""]
@@ -391,10 +412,10 @@
     {
       "tag": "wnv",
       "patterns": [
-        "Febrile illness fever headache",
-        "myalgia rash meningitis",
-        "nuchal rigidity encephalitis",
-        "altered mental status paralysis"
+        "I have a fever and headache",
+        "I have muscle aches and a rash",
+        "My neck is stiff and I might have meningitis",
+        "I'm confused and have paralysis"
       ],
       "responses": ["You're showing possible West Nile symptoms. Seek IMMEDIATE care for neurological signs (confusion, weakness). No specific treatment - supportive care only. Prevent mosquito bites."],
       "context": [""]
@@ -402,10 +423,10 @@
     {
       "tag": "staph",
       "patterns": [
-        "Red swollen skin pus",
-        "high fever chills",
-        "hypotension tachycardia",
-        "confusion sepsis"
+        "My skin is red, swollen, and has pus",
+        "I have a high fever and chills",
+        "My heart is racing and I'm hypotensive",
+        "I'm confused and might have sepsis"
       ],
       "responses": ["EMERGENCY: This may indicate invasive staph infection or sepsis. Seek IMMEDIATE medical care. Do not delay treatment."],
       "context": [""]
@@ -413,10 +434,10 @@
     {
       "tag": "amd",
       "patterns": [
-        "Blurred central vision",
-        "distorted lines difficulty reading",
-        "difficulty recognizing faces",
-        "dark spots scotomas"
+        "My central vision is blurry",
+        "Lines look distorted and I can't read well",
+        "I have trouble recognizing faces",
+        "I see dark spots in my vision"
       ],
       "responses": ["Schedule urgent ophthalmology evaluation. Use Amsler grid for self-monitoring. AREDS supplements may help dry AMD."],
       "context": [""]
@@ -424,9 +445,9 @@
     {
       "tag": "retinal_detachment",
       "patterns": [
-        "Sudden flashes floaters",
-        "shower curtain vision loss",
-        "peripheral vision defects"
+        "I see sudden flashes and floaters",
+        "It feels like a curtain over my vision",
+        "My peripheral vision is failing"
       ],
       "responses": ["RETINAL EMERGENCY - requires evaluation within 24 hours to prevent permanent vision loss. Do not wait."],
       "context": [""]
@@ -434,10 +455,10 @@
     {
       "tag": "glaucoma",
       "patterns": [
-        "Peripheral vision loss",
-        "tunnel vision eye pain",
-        "redness halos lights",
-        "optic nerve cupping"
+        "I'm losing my peripheral vision",
+        "I have tunnel vision and eye pain",
+        "My eyes are red and I see halos around lights",
+        "My optic nerve feels affected"
       ],
       "responses": ["Acute angle-closure is MEDICAL EMERGENCY. Chronic glaucoma requires regular IOP monitoring and lifelong treatment."],
       "context": [""]
@@ -445,9 +466,9 @@
     {
       "tag": "hysterectomy_indications",
       "patterns": [
-        "Pelvic pressure incontinence",
-        "back pain bleeding fibroids",
-        "protrusion uterus prolapse"
+        "I feel pelvic pressure and have incontinence",
+        "I have back pain and bleeding from fibroids",
+        "My uterus feels like it's protruding"
       ],
       "responses": ["Consult gynecology for pelvic exam and ultrasound. Hysterectomy is one of several treatment options available."],
       "context": [""]
@@ -455,9 +476,9 @@
     {
       "tag": "yeast_infection",
       "patterns": [
-        "Thick white discharge",
-        "vulvar itching redness",
-        "dyspareunia burning urination"
+        "I have thick white discharge",
+        "My vulva is itchy and red",
+        "It burns when I pee and sex hurts"
       ],
       "responses": ["OTC antifungals (clotrimazole) often effective. Seek care if: recurrent (>4x/year), pregnant, or immunocompromised."],
       "context": [""]
@@ -465,10 +486,10 @@
     {
       "tag": "anorexia",
       "patterns": [
-        "BMI low fear weight gain",
-        "body dysmorphia amenorrhea",
-        "lanugo hair cold intolerance",
-        "cardiac abnormalities"
+        "I'm scared of gaining weight and my BMI is low",
+        "I hate my body and haven't had my period",
+        "I have fine hair on my body and feel cold",
+        "My heart feels irregular"
       ],
       "responses": ["EMERGENT: This life-threatening disorder requires multidisciplinary care (psychiatry + nutrition + medicine)."],
       "context": [""]
@@ -476,9 +497,9 @@
     {
       "tag": "copd",
       "patterns": [
-        "Progressive dyspnea cough",
-        "wheezing barrel chest",
-        "cyanosis frequent exacerbations"
+        "I'm short of breath and coughing a lot",
+        "I wheeze and my chest looks barrel-shaped",
+        "My lips are blue and I have frequent flare-ups"
       ],
       "responses": ["Requires spirometry for diagnosis. Smoking cessation critical. Vaccinate against flu/pneumonia. Use inhalers as prescribed."],
       "context": [""]
@@ -486,9 +507,9 @@
     {
       "tag": "emphysema",
       "patterns": [
-        "Dyspnea exertion pursed-lip",
-        "decreased breath sounds",
-        "hyperinflation weight loss"
+        "I'm short of breath when I exert myself",
+        "My breath sounds are weak",
+        "My chest is hyperinflated and I'm losing weight"
       ],
       "responses": ["Pulmonary rehab improves outcomes. Oxygen if hypoxemic. Surgical options (LVRS) in select cases."],
       "context": [""]
@@ -496,9 +517,9 @@
     {
       "tag": "boils",
       "patterns": [
-        "Painful nodules pustule",
-        "axilla groin abscess",
-        "fever size facial"
+        "I have painful nodules with pus",
+        "I have abscesses in my armpit or groin",
+        "I have a fever and the boil is on my face"
       ],
       "responses": ["Apply warm compresses 3-4x/day. Do NOT squeeze. Seek care if: fever develops, size >5cm, or facial location."],
       "context": [""]
@@ -506,9 +527,9 @@
     {
       "tag": "keloid",
       "patterns": [
-        "Raised shiny scars",
-        "extend beyond wound",
-        "hyperpigmented painful itchy"
+        "I have raised, shiny scars",
+        "My scars grow beyond the wound",
+        "My scars are dark, painful, and itchy"
       ],
       "responses": ["Early intervention with silicone sheets/injections improves outcomes. Surgical excision often recurs without adjuvant therapy."],
       "context": [""]
@@ -516,9 +537,9 @@
     {
       "tag": "rosacea",
       "patterns": [
-        "Facial flushing redness",
-        "pus bumps blood vessels",
-        "thickening skin nose"
+        "My face is flushed and red",
+        "I have pus-filled bumps and visible blood vessels",
+        "My nose skin is thickening"
       ],
       "responses": ["You're showing classic rosacea symptoms. Avoid triggers (alcohol, spicy foods). Use gentle skincare and consult a dermatologist for prescription treatments."],
       "context": [""]
@@ -526,9 +547,9 @@
     {
       "tag": "shingles",
       "patterns": [
-        "Burning tingling rash",
-        "one side fluid blisters",
-        "extreme sensitivity fever"
+        "I have a burning, tingling rash",
+        "The rash is on one side with fluid blisters",
+        "I'm very sensitive and have a fever"
       ],
       "responses": ["URGENT: Shingles requires antiviral medication within 72 hours of rash appearance. Seek immediate medical care to prevent complications."],
       "context": [""]
@@ -536,9 +557,9 @@
     {
       "tag": "dandruff",
       "patterns": [
-        "White yellow flakes",
-        "itchy scalp scaly patches",
-        "eyebrows nose"
+        "I have white or yellow flakes on my scalp",
+        "My scalp is itchy with scaly patches",
+        "My eyebrows and nose are flaky"
       ],
       "responses": ["Use medicated anti-dandruff shampoos (containing zinc pyrithione or ketoconazole). See a doctor if redness/spreading occurs."],
       "context": [""]
@@ -546,9 +567,9 @@
     {
       "tag": "acne",
       "patterns": [
-        "Blackheads whiteheads pimples",
-        "painful nodules oily skin",
-        "chin forehead back"
+        "I have blackheads, whiteheads, and pimples",
+        "My nodules are painful and my skin is oily",
+        "I have acne on my chin, forehead, and back"
       ],
       "responses": ["Clean skin gently twice daily. Avoid picking. Over-the-counter benzoyl peroxide helps. Severe cases need dermatology care."],
       "context": [""]
@@ -556,8 +577,8 @@
     {
       "tag": "warts",
       "patterns": [
-        "Flesh-colored rough bumps",
-        "black pinpoints hands fingers"
+        "I have rough, flesh-colored bumps",
+        "I see black pinpoints on my hands or fingers"
       ],
       "responses": ["Most warts resolve in 2 years. Salicylic acid treatments help. Freezing (cryotherapy) by a doctor is faster."],
       "context": [""]
@@ -565,9 +586,9 @@
     {
       "tag": "scleroderma",
       "patterns": [
-        "Skin thickening tightening",
-        "Raynaud's red spots",
-        "joint pain"
+        "My skin is thickening and tightening",
+        "My fingers turn white in the cold and I have red spots",
+        "My joints hurt"
       ],
       "responses": ["This autoimmune condition requires rheumatology evaluation. Early treatment prevents organ damage."],
       "context": [""]
@@ -575,9 +596,9 @@
     {
       "tag": "lichen_planus",
       "patterns": [
-        "Purple itchy bumps",
-        "wrists ankles white patches",
-        "mouth nail changes"
+        "I have purple, itchy bumps",
+        "I have white patches on my wrists and ankles",
+        "My mouth and nails are changing"
       ],
       "responses": ["Topical corticosteroids often help. Oral lesions need monitoring for cancer risk."],
       "context": [""]
@@ -585,9 +606,9 @@
     {
       "tag": "dementia",
       "patterns": [
-        "Memory loss confusion",
-        "time place familiar tasks",
-        "personality changes"
+        "I'm forgetting things and feel confused",
+        "I get lost with time, place, or tasks",
+        "My personality is changing"
       ],
       "responses": ["Schedule a cognitive evaluation. Early diagnosis of Alzheimer's/dementia allows better management."],
       "context": [""]
@@ -595,9 +616,9 @@
     {
       "tag": "hives",
       "patterns": [
-        "Raised red welts",
-        "intense itching swelling",
-        "lips eyelids lasts hours"
+        "I have raised, red welts on my skin",
+        "I'm itching a lot and have swelling",
+        "My lips or eyelids are swollen for hours"
       ],
       "responses": ["Antihistamines provide relief. Seek emergency care if throat swelling or breathing difficulty occurs."],
       "context": [""]
@@ -605,9 +626,9 @@
     {
       "tag": "bulimia",
       "patterns": [
-        "Binge eating purging",
-        "vomiting laxatives tooth erosion",
-        "swollen cheeks electrolytes"
+        "I binge eat and then purge",
+        "I vomit or use laxatives and my teeth are eroding",
+        "My cheeks are swollen and my electrolytes are off"
       ],
       "responses": ["This life-threatening eating disorder requires psychiatric + nutritional care. Confidential help is available."],
       "context": [""]

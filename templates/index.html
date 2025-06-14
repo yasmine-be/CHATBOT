@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Assistant Chatbot</title>
+    <link rel="stylesheet" href="\static\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="bot-avatar">
+                <i class="fas fa-user-md"></i>
+            </div>
+            <div class="header-info">
+                <h2>DiagnoAI</h2>
+                <p>Online</p>
+            </div>
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <!-- Le premier message du bot et les boutons ont été supprimés -->
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Describe your symptoms in detail ...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <div class="disclaimer">
+            <p><i class="fas fa-exclamation-triangle warning-icon"></i> <strong>Important:</strong> This AI tool provides preliminary information only. Always consult a healthcare professional for medical advice. In emergencies, call your local emergency number immediately.</p>
+        </div>
+    </div>
+    
+    <script src="\static\script.js"></script>
+</body>
+</html>
